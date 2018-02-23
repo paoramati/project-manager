@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Projects from './Components/Projects'  //import our created component into the App gateway component
 import AddProject from './Components/AddProject'
 import './App.css';
+import uuid from 'uuid';
 
 class App extends Component {
   constructor() {
@@ -16,14 +17,17 @@ class App extends Component {
   componentWillMount() {
     this.setState({projects: [
       {
+        id:uuid.v4(),
         title: 'Flora By Laura',
         category: 'Laravel'
       },
       {
+        id:uuid.v4(),
         title: 'Kakariki Kids',
         category: 'Jigsaw'
       },
       {
+        id:uuid.v4(),
         title: 'Junky',
         category: 'React'
       }
